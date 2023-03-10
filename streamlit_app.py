@@ -7,7 +7,7 @@ st.title("Amsterdam Airbnb")
 st.markdown("Data Exploration on Amsterdam Airbnb")
 
 # Read dataframe
-dataframe = pd.read_csv(
+df = pd.read_csv(
     "data/WK1_Airbnb_Amsterdam_listings_proj_solution.csv",
 )
 
@@ -16,7 +16,7 @@ dataframe = pd.read_csv(
 df = df[df["price"] <= 1000]
 
 # Display dataframe and text
-st.dataframe(dataframe)
+st.dataframe(df)
 st.markdown("Below is a map showing all the Airbnb listings with price less than 1000 pesos")
 
 # Create the plotly express figure
@@ -43,7 +43,7 @@ fig.update_layout(
     autosize=True,
     hovermode='closest',
     mapbox=dict(
-        accesstoken=mapbox_access_token,
+        # accesstoken=mapbox_access_token,
         bearing=0
     ),
 )
