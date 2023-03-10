@@ -13,11 +13,11 @@ df = pd.read_csv(
 
 # We have a limited budget, therefore we would like to exclude
 # listings with a price above 1000 pesos per night
-df = df[df["price"] <= 1000]
+df = df[df["price"] <= 5000]
 
 # Display dataframe and text
 st.dataframe(df)
-st.markdown("Below is a map showing all the Airbnb listings with price less than 1000 pesos")
+st.markdown("Below is a map showing all the Airbnb listings with price less than 5000 mx pesos")
 
 # Create the plotly express figure
 fig = px.scatter_mapbox(
@@ -49,7 +49,7 @@ fig.update_layout(
 
 fig.update_geos(center=dict(lat=df.iloc[0][2], lon=df.iloc[0][3]))
 
-st.markdown("Diego Hurtado")
-
 # Show the figure
 st.plotly_chart(fig, use_container_width=True)
+
+st.markdown("Diego Hurtado")
