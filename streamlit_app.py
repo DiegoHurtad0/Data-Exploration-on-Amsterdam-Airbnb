@@ -50,5 +50,5 @@ fig.update_layout(
 
 fig.update_geos(center=dict(lat=df.iloc[0][2], lon=df.iloc[0][3]))
 
-Show the figure
+# Show the figure
 st.plotly_chart(fig, use_container_width=True)
