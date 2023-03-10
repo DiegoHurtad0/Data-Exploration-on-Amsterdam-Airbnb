@@ -29,7 +29,7 @@ fig = px.scatter_mapbox(
     size_max=10, 
     color_continuous_scale=px.colors.sequential.Reds, 
     zoom=11,
-    height=800,
+    height=600,
     width=950,
     hover_name="price",
     hover_data=["Meters from chosen location", "Location"],
@@ -48,6 +48,8 @@ fig.update_layout(
 )
 
 fig.update_geos(center=dict(lat=df.iloc[0][2], lon=df.iloc[0][3]))
+
+st.markdown("Diego Hurtado")
 
 # Show the figure
 st.plotly_chart(fig, use_container_width=True)
