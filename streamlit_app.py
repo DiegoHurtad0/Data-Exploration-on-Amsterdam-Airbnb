@@ -39,11 +39,10 @@ fig = px.scatter_mapbox(
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
 fig.update_layout(
-    mapbox_style='dark',
+    mapbox_style='stamen-terrain',
     autosize=True,
     hovermode='closest',
     mapbox=dict(
-        # accesstoken=mapbox_access_token,
         bearing=0
     ),
 )
