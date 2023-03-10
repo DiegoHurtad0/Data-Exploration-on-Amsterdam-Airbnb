@@ -13,7 +13,7 @@ df = pd.read_csv(
 
 # We have a limited budget, therefore we would like to exclude
 # listings with a price above 1000 pesos per night
-df = df[df["price"] <= 5000]
+df = df[df["price"] <= 2000]
 
 # Display dataframe and text
 st.dataframe(df)
