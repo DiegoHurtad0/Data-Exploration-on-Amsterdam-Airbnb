@@ -16,8 +16,9 @@ def load_lottieurl(url: str):
 # Display title and text
 # Confit
 st.set_page_config(page_title='Amsterdam Airbnb Tool', page_icon=':bar_chart:', layout='wide')
-#st.title("Amsterdam Airbnb")
-st.markdown("Data Exploration on Amsterdam Airbnb")
+
+# Title
+st.title("Data Exploration on Amsterdam Airbnb")
 
 # Read dataframe
 df = pd.read_csv(
@@ -30,7 +31,9 @@ df = df[df["price"] <= 1500]
 
 # Display dataframe and text
 st.dataframe(df)
-st.markdown("Below is a map showing all the Airbnb listings with price less than 1500 mx pesos")
+
+
+st.subheader("Below is a map showing all the Airbnb listings with price less than 1500 mx pesos")
 
 # Create the plotly express figure
 fig = px.scatter_mapbox(
@@ -83,8 +86,8 @@ st.markdown("Diego Gustavo Hurtado Olivares")
 
 c1, c2, c3 = st.columns(3)
 with c1:
-    st.info('**Data Scientist: [@Diego](https://www.linkedin.com/in/diegohurtadoo/)**', icon="💡")
+    st.info('**Data Scientist: [@Diego Hurtado](https://www.linkedin.com/in/diegohurtadoo/)**', icon="👨🏻‍💻")
 with c2:
     st.info('**GitHub: [@DiegoHurtad0](https://github.com/DiegoHurtad0/DiegoHurtad0)**', icon="💻")
 with c3:
-    st.info('**Medium: [Diego Hurtado](https://medium.com/@diego.hurtado.olivares)**', icon="🧠")
+    st.info('**Medium: [Diego Hurtado](https://medium.com/@diego.hurtado.olivares)**', icon="📊")
