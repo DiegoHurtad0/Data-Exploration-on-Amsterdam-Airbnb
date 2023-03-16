@@ -1,3 +1,4 @@
+import pyarmor
 from pyarmor.pyarmor import PyArmor
 from pytransform import pyarmor_runtime
 pyarmor_runtime()
